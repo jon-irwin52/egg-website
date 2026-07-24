@@ -7,6 +7,7 @@
   <title>AI-Native Revenue Growth Consultancy for Founders | EM Growth Group · E.G.G.</title>
   <meta name="description" content="E.G.G. finds where growing DTC and tech businesses lose revenue, then builds the digital marketing, tech, and operational solutions to fix it. 116% growth delivered, 98% retention. Book a Revenue Gap Diagnostic.">
   <link rel="canonical" href="https://www.emgrowthgroup.com/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <!-- LAUNCH TODO: the diagnostic-call CTAs now hand off to cal.com (https://cal.com/emgrowth/discovery).
@@ -115,12 +116,6 @@
     .mcta .btn{width:100%;justify-content:center}
     @media(max-width:760px){.mcta{display:block}body{padding-bottom:76px}}
 
-    /* hero client strip (peg: Vaynermedia) */
-    .hero-clients{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:44px;padding-top:22px;border-top:1px solid rgba(245,243,235,.14)}
-    .hc-label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,243,235,.5)}
-    .hc-logo{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:17px;color:rgba(245,243,235,.62);letter-spacing:.01em;transition:color .2s ease-out}
-    .hc-logo:hover{color:var(--butter)}
-    @media(max-width:640px){.hero-clients{gap:14px 20px;margin-top:30px;padding-top:16px}.hc-logo{font-size:15px}}
 
     /* floating discovery-call button (peg: Solved6) */
     .fab-call{position:fixed;right:22px;bottom:22px;z-index:55;transform:translateY(0);transition:transform .3s var(--ease),opacity .3s ease-out;opacity:0}
@@ -143,7 +138,7 @@
     .btn.sm{padding:11px 22px;font-size:13px}
 
     /* ============ HERO ============ */
-    .hero{background:var(--ink);color:var(--ivory);min-height:100svh;display:flex;align-items:center;padding:150px 0 110px;position:relative;overflow:hidden;text-align:center}
+    .hero{background:var(--ink);color:var(--ivory);min-height:100svh;display:flex;align-items:flex-start;padding:150px 0 110px;position:relative;overflow:hidden;text-align:center}
     .hero .bg{position:absolute;inset:0}
     .hero .bg video,.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
     /* legibility stack: darken + center vignette so white type always reads */
@@ -161,8 +156,8 @@
 
     /* signature: the egg IS the gap, set inline in the headline */
     .egg{position:relative;display:inline-block;width:.92em;height:1.16em;aspect-ratio:200/252;vertical-align:middle;flex-shrink:0;translate:0 -.04em}
-    .egg .float{position:absolute;inset:0;display:block;border-radius:50% 50% 50% 50%/57% 57% 43% 43%;background:var(--grad-gold);padding:.055em;box-shadow:0 .08em .3em rgba(0,0,0,.4)}
-    .egg .mask{position:absolute;inset:.055em;border-radius:50% 50% 50% 50%/57% 57% 43% 43%;overflow:hidden;background:var(--teal-deep);display:block}
+    .egg .float{position:absolute;inset:0;display:block;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;background:var(--grad-gold);padding:.055em;box-shadow:0 .08em .3em rgba(0,0,0,.4)}
+    .egg .mask{position:absolute;inset:.055em;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;overflow:hidden;background:var(--teal-deep);display:block}
     .egg video,.egg .mask img{width:100%;height:100%;object-fit:cover}
     .egg .mono{position:absolute;left:50%;top:50%;width:42%;transform:translate(-50%,-50%);filter:drop-shadow(0 .04em .1em rgba(0,0,0,.5));z-index:2}
     .scrollcue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(245,243,235,.5)}
@@ -261,12 +256,12 @@
     .node-wrap{position:absolute;top:50%;left:50%;width:0;height:0;transform:rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle)))}
     .ring-inner .node-spin{animation:orbit-ccw 90s linear infinite}
     .ring-outer .node-spin{animation:orbit-cw 130s linear infinite}
-    .node-inner{position:relative;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:104px;height:104px;border-radius:50%;background:rgba(245,243,235,.06);border:1px solid rgba(245,243,235,.16);color:var(--ivory);font-family:'Lato',Arial,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.01em;text-align:center;line-height:1.25;cursor:default;transition:background .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out,transform .3s ease-out;padding:8px}
+    .node-inner{position:relative;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:98px;height:124px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;background:rgba(245,243,235,.06);border:1px solid rgba(245,243,235,.16);color:var(--ivory);font-family:'Lato',Arial,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.01em;text-align:center;line-height:1.25;cursor:default;transition:background .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out,transform .3s ease-out;padding:8px}
     .node-inner b{font-size:13px}
     .node-inner .cap{display:block;font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:500;font-size:11px;color:rgba(245,243,235,.55);margin-top:4px;opacity:0;max-height:0;overflow:hidden;transition:opacity .3s ease-out,max-height .3s ease-out}
     .node-inner:hover,.node-inner:focus-visible{background:rgba(201,168,76,.16);border-color:var(--gold-b);box-shadow:0 0 34px -6px rgba(201,168,76,.6);transform:translate(-50%,-50%) scale(1.08)}
     .node-inner:hover .cap,.node-inner:focus-visible .cap{opacity:1;max-height:40px}
-    @media(max-width:640px){.team-orbit{margin-top:44px}.node-inner{width:84px;height:84px;font-size:11px;padding:6px}.node-inner b{font-size:11.5px}.node-inner .cap{font-size:9.5px}.team-orbit .core{width:80px;height:80px}}
+    @media(max-width:640px){.team-orbit{margin-top:44px}.node-inner{width:76px;height:96px;font-size:11px;padding:6px}.node-inner b{font-size:11.5px}.node-inner .cap{font-size:9.5px}.team-orbit .core{width:80px;height:80px}}
     @keyframes orbit-cw{to{transform:rotate(360deg)}}
     @keyframes orbit-ccw{to{transform:rotate(-360deg)}}
     @media(prefers-reduced-motion:reduce){.ring-inner,.ring-outer,.ring-inner .node-spin,.ring-outer .node-spin{animation:none}}
@@ -458,17 +453,6 @@
           <a class="btn line" href="#services">Explore services</a>
         </div>
         <p class="proof" data-load="3">116% growth delivered · 98% retention · Trusted by IBM, Sharpie &amp; Crayola alumni brands</p>
-        <div class="hero-clients" data-load="4" aria-label="Brands we've worked with">
-          <span class="hc-label">Teams behind</span>
-          <span class="hc-logo">IBM</span>
-          <span class="hc-logo">Sharpie</span>
-          <span class="hc-logo">Delsey Travel</span>
-          <span class="hc-logo">Squatty Potty</span>
-          <span class="hc-logo">Bestway</span>
-          <span class="hc-logo">Lansinoh</span>
-          <span class="hc-logo">Safety First</span>
-          <span class="hc-logo">Crayola</span>
-        </div>
       </div>
     </div>
     <span class="scrollcue">Scroll ↓</span>
