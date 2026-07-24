@@ -138,7 +138,7 @@
     .btn.sm{padding:11px 22px;font-size:13px}
 
     /* ============ HERO ============ */
-    .hero{background:var(--ink);color:var(--ivory);min-height:100svh;display:flex;align-items:flex-start;padding:150px 0 110px;position:relative;overflow:hidden;text-align:center}
+    .hero{background:var(--ink);color:var(--ivory);display:flex;align-items:flex-start;padding:150px 0 90px;position:relative;overflow:hidden;text-align:center}
     .hero .bg{position:absolute;inset:0}
     .hero .bg video,.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
     /* legibility stack: darken + center vignette so white type always reads */
@@ -247,9 +247,10 @@
     /* team orbit (peg: NoGood's Squads → "Your AI-Native Growth Team") */
     #team{background:var(--ink)}
     #team .lead{color:rgba(245,243,235,.75);max-width:60ch;margin-bottom:8px}
-    .team-orbit{position:relative;width:min(560px,86vw);height:min(560px,86vw);margin:64px auto 12px}
-    .team-orbit .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;background:var(--grad-gold);box-shadow:0 0 0 1px rgba(255,221,99,.25),0 0 70px -10px rgba(201,168,76,.65);display:flex;align-items:center;justify-content:center;z-index:2}
-    .team-orbit .core-yolk{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3c9,var(--gold-d) 78%);box-shadow:inset 0 0 12px rgba(0,0,0,.25)}
+    .team-orbit{position:relative;width:min(620px,92vw);height:min(620px,92vw);margin:64px auto 12px}
+    .team-orbit .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:104px;height:104px;z-index:2}
+    .team-orbit .core-logo{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--grad-gold);box-shadow:0 0 0 1px rgba(255,221,99,.25),0 0 70px -10px rgba(201,168,76,.65)}
+    .team-orbit .core-label{position:absolute;top:calc(50% + 66px);left:50%;transform:translateX(-50%);font-weight:900;font-size:13px;letter-spacing:.22em;color:var(--gold-b);text-transform:uppercase;z-index:2;white-space:nowrap}
     .ring{position:absolute;inset:0}
     .ring-inner{animation:orbit-cw 90s linear infinite}
     .ring-outer{animation:orbit-ccw 130s linear infinite}
@@ -261,7 +262,7 @@
     .node-inner .cap{display:block;font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:500;font-size:11px;color:rgba(245,243,235,.55);margin-top:4px;opacity:0;max-height:0;overflow:hidden;transition:opacity .3s ease-out,max-height .3s ease-out}
     .node-inner:hover,.node-inner:focus-visible{background:rgba(201,168,76,.16);border-color:var(--gold-b);box-shadow:0 0 34px -6px rgba(201,168,76,.6);transform:translate(-50%,-50%) scale(1.08)}
     .node-inner:hover .cap,.node-inner:focus-visible .cap{opacity:1;max-height:40px}
-    @media(max-width:640px){.team-orbit{margin-top:44px}.node-inner{width:76px;height:96px;font-size:11px;padding:6px}.node-inner b{font-size:11.5px}.node-inner .cap{font-size:9.5px}.team-orbit .core{width:80px;height:80px}}
+    @media(max-width:640px){.team-orbit{margin-top:44px}.node-inner{width:76px;height:96px;font-size:11px;padding:6px}.node-inner b{font-size:11.5px}.node-inner .cap{font-size:9.5px}.team-orbit .core{width:80px;height:80px}.team-orbit .core-label{top:calc(50% + 54px);font-size:11px}}
     @keyframes orbit-cw{to{transform:rotate(360deg)}}
     @keyframes orbit-ccw{to{transform:rotate(-360deg)}}
     @media(prefers-reduced-motion:reduce){.ring-inner,.ring-outer,.ring-inner .node-spin,.ring-outer .node-spin{animation:none}}
@@ -599,8 +600,9 @@
 
       <div class="team-orbit reveal" role="img" aria-label="Eight specialists orbiting the E.G.G. golden egg: Revenue Lead, AI Architect, RevOps Analyst, Business Strategist, Paid Media, SEO and GEO, Social and Content, Developer">
         <div class="core">
-          <span class="core-yolk"></span>
+          <img class="core-logo" src="/logo.png" alt="E.G.G. logo">
         </div>
+        <span class="core-label">EGG</span>
 
         <div class="ring ring-inner">
           <!-- inner ring: strategy & systems -->
@@ -620,16 +622,16 @@
 
         <div class="ring ring-outer">
           <!-- outer ring: execution -->
-          <div class="node-wrap" style="--angle:45deg;--radius:216px">
+          <div class="node-wrap" style="--angle:45deg;--radius:250px">
             <div class="node-spin"><button class="node-inner" type="button"><b>Paid Media</b><span class="cap">Ads that pay for themselves</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:135deg;--radius:216px">
+          <div class="node-wrap" style="--angle:135deg;--radius:250px">
             <div class="node-spin"><button class="node-inner" type="button"><b>SEO &amp; GEO</b><span class="cap">Found by search and AI</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:225deg;--radius:216px">
+          <div class="node-wrap" style="--angle:225deg;--radius:250px">
             <div class="node-spin"><button class="node-inner" type="button"><b>Social &amp; Content</b><span class="cap">Content that compounds</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:315deg;--radius:216px">
+          <div class="node-wrap" style="--angle:315deg;--radius:250px">
             <div class="node-spin"><button class="node-inner" type="button"><b>Developer</b><span class="cap">Ships the tech</span></button></div>
           </div>
         </div>
