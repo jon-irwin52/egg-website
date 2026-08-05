@@ -248,9 +248,9 @@
     /* team orbit (peg: NoGood's Squads → "Your AI-Native Growth Team") */
     #team{background:var(--ink)}
     #team .lead{color:rgba(245,243,235,.75);max-width:60ch;margin-bottom:8px}
-    .team-orbit{position:relative;width:min(620px,92vw);height:min(620px,92vw);margin:64px auto 12px}
+    .team-orbit{position:relative;width:min(660px,96vw);height:min(660px,96vw);margin:64px auto 12px}
     .team-orbit .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:104px;height:104px;z-index:2}
-    .team-orbit .core-logo{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--grad-gold);box-shadow:0 0 0 1px rgba(255,221,99,.25),0 0 70px -10px rgba(201,168,76,.65)}
+    .team-orbit .core-logo{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--grad-gold);box-shadow:0 0 0 1px rgba(255,221,99,.25),0 0 var(--core-glow,70px) -10px rgba(201,168,76,.65)}
     .team-orbit .core-label{position:absolute;top:calc(50% + 66px);left:50%;transform:translateX(-50%);font-weight:900;font-size:13px;letter-spacing:.22em;color:var(--gold-b);text-transform:uppercase;z-index:2;white-space:nowrap}
     .ring{position:absolute;inset:0;animation:orbit-cw 110s linear infinite}
     .node-wrap{position:absolute;top:50%;left:50%;width:0;height:0;transform:rotate(var(--angle)) translate(calc(var(--radius) * var(--radius-scale,1))) rotate(calc(-1 * var(--angle)))}
@@ -262,7 +262,7 @@
     .node-inner b{font-size:13px}
     .node-inner .cap{display:block;font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:500;font-size:11px;color:rgba(245,243,235,.55);margin-top:4px}
     .node-inner:hover,.node-inner:focus-visible{background:rgba(201,168,76,.16);border-color:var(--gold-b);box-shadow:0 0 34px -6px rgba(201,168,76,.6);transform:translate(-50%,-50%) scale(1.08)}
-    @media(max-width:640px){.team-orbit{margin-top:44px;--radius-scale:.6}.node-inner{width:76px;height:96px;font-size:11px;padding:6px}.node-inner b{font-size:11.5px}.node-inner .cap{font-size:9.5px}.team-orbit .core{width:80px;height:80px}.team-orbit .core-label{top:calc(50% + 54px);font-size:11px}}
+    @media(max-width:640px){.team-orbit{margin-top:44px;--radius-scale:.57}.node-inner{width:72px;height:90px;font-size:11px;padding:6px}.node-inner b{font-size:11.5px}.node-inner .cap{font-size:9.5px}.team-orbit .core{width:60px;height:60px;--core-glow:38px}.team-orbit .core-label{top:calc(50% + 42px);font-size:11px}}
     /* tiers */
     .tiers{padding-top:0}
     .tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
@@ -621,25 +621,25 @@
         <span class="core-label">EGG</span>
 
         <div class="ring">
-          <div class="node-wrap" style="--angle:270deg;--radius:220px">
+          <div class="node-wrap" style="--angle:270deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>RevOps Analyst</b><span class="cap">Process, Data &amp; Alignment</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:321.43deg;--radius:220px">
+          <div class="node-wrap" style="--angle:321.43deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>AI Architect</b><span class="cap">Automation &amp; Scale</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:12.86deg;--radius:220px">
+          <div class="node-wrap" style="--angle:12.86deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>Social Media</b><span class="cap">Social Strategy &amp; Content</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:64.29deg;--radius:220px">
+          <div class="node-wrap" style="--angle:64.29deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>CTO / Tech</b><span class="cap">Digital Infrastructure</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:115.71deg;--radius:220px">
+          <div class="node-wrap" style="--angle:115.71deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>Paid Media</b><span class="cap">Performance Ads &amp; Acquisition</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:167.14deg;--radius:220px">
+          <div class="node-wrap" style="--angle:167.14deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>SEO &amp; GEO</b><span class="cap">Search &amp; AI Answer Visibility</span></button></div>
           </div>
-          <div class="node-wrap" style="--angle:218.57deg;--radius:220px">
+          <div class="node-wrap" style="--angle:218.57deg;--radius:240px">
             <div class="node-spin"><button class="node-inner" type="button"><b>Rev Lead</b><span class="cap">Revenue Gap Diagnosis &amp; Plan</span></button></div>
           </div>
         </div>
