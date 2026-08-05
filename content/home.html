@@ -71,6 +71,7 @@
       --r:12px; --rc:24px;
       --ease:cubic-bezier(.16,1,.3,1);
       --grad-gold:linear-gradient(115deg,#FFDD63 0%,#C9A84C 40%,#836B2C 100%);
+      --grad-gold-deep:linear-gradient(115deg,#C9A84C 0%,#AA893A 45%,#7A5F26 100%);
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -83,7 +84,7 @@
     .eyebrow::before{content:"◆  ";font-size:9px;vertical-align:2px}
     section{padding:120px 0;scroll-margin-top:72px}
     h2{font-weight:900;font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-.02em;color:var(--ink);margin-bottom:20px}
-    h2 .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+    h2 .w{display:inline-block;overflow:hidden;vertical-align:bottom;line-height:1.25}
     h2 .w i{display:inline-block;font-style:normal}
     .dark h2{color:var(--ivory)}
     a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold-b);outline-offset:3px}
@@ -148,7 +149,7 @@
     .hero h1{font-weight:900;font-size:88px;font-size:clamp(44px,9.2vw,140px);line-height:.94;letter-spacing:-.03em;text-transform:uppercase;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.45)}
     .hero h1 .l{display:block;overflow:hidden;padding-bottom:.04em}
     .hero h1 .l>span{display:inline-flex;align-items:center;justify-content:center;gap:.12em}
-    .hero h1 .counter{display:block;text-transform:none;font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:400;font-size:52px;font-size:clamp(34px,5.6vw,76px);letter-spacing:.01em;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:-.04em;padding-bottom:.14em;text-shadow:none}
+    .hero h1 .counter{display:block;text-transform:none;font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:400;font-size:52px;font-size:clamp(34px,5.6vw,76px);letter-spacing:.01em;background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;padding-bottom:.14em;text-shadow:none}
     .hero .lede{font-size:clamp(16px,1.5vw,18.5px);max-width:60ch;margin:30px auto 34px;color:rgba(245,243,235,.88);text-shadow:0 2px 12px rgba(0,0,0,.5)}
     .hero .lede b{color:#fff;font-weight:800}
     .hero .actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center}
@@ -192,7 +193,7 @@
     /* manifesto */
     .manifesto{padding:70px 0 130px;text-align:center}
     .manifesto p.big{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:clamp(30px,4.8vw,54px);line-height:1.22;color:var(--ink);max-width:21ch;margin:0 auto}
-    .manifesto p.big em{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+    .manifesto p.big em{background:var(--grad-gold-deep);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
     .manifesto .sub{margin-top:26px;font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
 
     /* services */
@@ -210,6 +211,8 @@
     .svc-stage{min-height:340px}
     .svc-panel{display:block}
     .svc-panel[hidden]{display:none}
+    .svc-copy .tags{margin-bottom:16px;display:flex;flex-wrap:wrap;gap:8px}
+    .svc-copy .tag{font-size:12px;font-weight:700;letter-spacing:.05em;padding:6px 14px;border-radius:999px;border:1px solid rgba(201,168,76,.4);color:var(--gold-b)}
     .svc-copy p{color:rgba(245,243,235,.8);font-size:17px;max-width:56ch}
     .svc-copy ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:11px}
     .svc-copy li{position:relative;padding-left:22px;color:var(--ivory);font-size:16px;line-height:1.4}
@@ -218,6 +221,7 @@
       .svc-shell{grid-template-columns:1fr;gap:8px}
       .svc-tab{padding:20px 8px}
       .svc-panel{text-align:center;padding-top:28px}
+      .svc-copy .tags{justify-content:center}
       .svc-copy p{max-width:none}
       .svc-copy ul{align-items:flex-start;margin-left:auto;margin-right:auto;width:fit-content}
     }
@@ -501,6 +505,7 @@
         <div class="svc-stage">
           <div class="svc-panel active" id="svc-panel-1" role="tabpanel" aria-labelledby="svc-tab-1">
             <div class="svc-copy">
+              <div class="tags"><span class="tag">Paid media</span><span class="tag">SEO + GEO</span><span class="tag">Email &amp; CRM</span><span class="tag">Conversion</span></div>
               <p>Precision acquisition built on unit economics — paid search, paid social, and landing systems that pay for themselves before they scale.</p>
               <ul>
                 <li>Full-funnel paid acquisition (Google, Meta, LinkedIn)</li>
@@ -513,6 +518,7 @@
 
           <div class="svc-panel" id="svc-panel-2" role="tabpanel" aria-labelledby="svc-tab-2" hidden>
             <div class="svc-copy">
+              <div class="tags"><span class="tag">Short-form video</span><span class="tag">Content systems</span><span class="tag">Community</span><span class="tag">Creators</span></div>
               <p>Organic resonance engineered as a demand asset — not a content treadmill. Built for lifecycle pull, not vanity reach.</p>
               <ul>
                 <li>Founder-led and brand narrative positioning</li>
@@ -525,6 +531,7 @@
 
           <div class="svc-panel" id="svc-panel-3" role="tabpanel" aria-labelledby="svc-tab-3" hidden>
             <div class="svc-copy">
+              <div class="tags"><span class="tag">AI agents</span><span class="tag">n8n automation</span><span class="tag">Apps &amp; dashboards</span><span class="tag">Digital transformation</span></div>
               <p>AI leverage deployed on top of clean process — automating the expensive, repeatable work without breaking core RevOps.</p>
               <ul>
                 <li>Lead triage, enrichment, and routing agents</li>
@@ -537,6 +544,7 @@
 
           <div class="svc-panel" id="svc-panel-4" role="tabpanel" aria-labelledby="svc-tab-4" hidden>
             <div class="svc-copy">
+              <div class="tags"><span class="tag">Funnel design</span><span class="tag">Data &amp; attribution</span><span class="tag">Process</span></div>
               <p>The unsexy layer where most revenue actually leaks: handoffs, SOPs, CRM hygiene, and forecast integrity.</p>
               <ul>
                 <li>Pipeline architecture and stage-exit criteria</li>
