@@ -252,8 +252,12 @@
     .team-orbit .core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:104px;height:104px;z-index:2}
     .team-orbit .core-logo{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--grad-gold);box-shadow:0 0 0 1px rgba(255,221,99,.25),0 0 70px -10px rgba(201,168,76,.65)}
     .team-orbit .core-label{position:absolute;top:calc(50% + 66px);left:50%;transform:translateX(-50%);font-weight:900;font-size:13px;letter-spacing:.22em;color:var(--gold-b);text-transform:uppercase;z-index:2;white-space:nowrap}
-    .ring{position:absolute;inset:0}
+    .ring{position:absolute;inset:0;animation:orbit-cw 110s linear infinite}
     .node-wrap{position:absolute;top:50%;left:50%;width:0;height:0;transform:rotate(var(--angle)) translate(calc(var(--radius) * var(--radius-scale,1))) rotate(calc(-1 * var(--angle)))}
+    .node-spin{animation:orbit-ccw 110s linear infinite}
+    @keyframes orbit-cw{to{transform:rotate(360deg)}}
+    @keyframes orbit-ccw{to{transform:rotate(-360deg)}}
+    @media(prefers-reduced-motion:reduce){.ring,.node-spin{animation:none}}
     .node-inner{position:relative;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:98px;height:124px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;background:rgba(245,243,235,.06);border:1px solid rgba(245,243,235,.16);color:var(--ivory);font-family:'Lato',Arial,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.01em;text-align:center;line-height:1.25;cursor:default;transition:background .3s ease-out,border-color .3s ease-out,box-shadow .3s ease-out,transform .3s ease-out;padding:8px}
     .node-inner b{font-size:13px}
     .node-inner .cap{display:block;font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:500;font-size:11px;color:rgba(245,243,235,.55);margin-top:4px}
@@ -618,25 +622,25 @@
 
         <div class="ring">
           <div class="node-wrap" style="--angle:270deg;--radius:220px">
-            <button class="node-inner" type="button"><b>RevOps Analyst</b><span class="cap">Process, Data &amp; Alignment</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>RevOps Analyst</b><span class="cap">Process, Data &amp; Alignment</span></button></div>
           </div>
           <div class="node-wrap" style="--angle:321.43deg;--radius:220px">
-            <button class="node-inner" type="button"><b>AI Architect</b><span class="cap">Automation &amp; Scale</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>AI Architect</b><span class="cap">Automation &amp; Scale</span></button></div>
           </div>
           <div class="node-wrap" style="--angle:12.86deg;--radius:220px">
-            <button class="node-inner" type="button"><b>Social Media</b><span class="cap">Social Strategy &amp; Content</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>Social Media</b><span class="cap">Social Strategy &amp; Content</span></button></div>
           </div>
           <div class="node-wrap" style="--angle:64.29deg;--radius:220px">
-            <button class="node-inner" type="button"><b>CTO / Tech</b><span class="cap">Digital Infrastructure</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>CTO / Tech</b><span class="cap">Digital Infrastructure</span></button></div>
           </div>
           <div class="node-wrap" style="--angle:115.71deg;--radius:220px">
-            <button class="node-inner" type="button"><b>Paid Media</b><span class="cap">Performance Ads &amp; Acquisition</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>Paid Media</b><span class="cap">Performance Ads &amp; Acquisition</span></button></div>
           </div>
           <div class="node-wrap" style="--angle:167.14deg;--radius:220px">
-            <button class="node-inner" type="button"><b>SEO &amp; GEO</b><span class="cap">Search &amp; AI Answer Visibility</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>SEO &amp; GEO</b><span class="cap">Search &amp; AI Answer Visibility</span></button></div>
           </div>
           <div class="node-wrap" style="--angle:218.57deg;--radius:220px">
-            <button class="node-inner" type="button"><b>Rev Lead</b><span class="cap">Revenue Gap Diagnosis &amp; Plan</span></button>
+            <div class="node-spin"><button class="node-inner" type="button"><b>Rev Lead</b><span class="cap">Revenue Gap Diagnosis &amp; Plan</span></button></div>
           </div>
         </div>
       </div>
