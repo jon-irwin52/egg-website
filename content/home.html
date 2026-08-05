@@ -65,7 +65,7 @@
 
   <style>
     :root{
-      --teal:#006A6A; --teal-deep:#004F4F; --ink:#0B3B3B; --ink2:#082e2e;
+      --teal:#006A6A; --teal-deep:#004F4F; --ink:#0B3B3B; --ink2:#082e2e; --live-green:#2ECC71;
       --gold:#AA893A; --gold-b:#C9A84C; --gold-d:#836B2C; --butter:#FFDD63;
       --ivory:#F5F3EB; --leak:#B4552D; --body:#233333; --hair:#E4DFCF;
       --r:12px; --rc:24px;
@@ -208,21 +208,16 @@
     .svc-tab.active{color:var(--ivory);border-left-color:var(--gold);background:rgba(245,243,235,.05)}
     .svc-tab.active .n{opacity:1}
     .svc-stage{min-height:340px}
-    .svc-panel{display:grid;grid-template-columns:200px 1fr;gap:44px;align-items:center}
+    .svc-panel{display:block}
     .svc-panel[hidden]{display:none}
-    .svc-visual{width:200px;height:250px;overflow:visible;flex-shrink:0}
-    .svc-visual .eggbg{fill:var(--teal-deep);stroke:var(--gold-b);stroke-width:3}
-    .svc-visual .ic{stroke:var(--gold-b);stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
-    .svc-visual .icf{fill:var(--gold-b)}
     .svc-copy p{color:rgba(245,243,235,.8);font-size:17px;max-width:56ch}
     .svc-copy ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:11px}
     .svc-copy li{position:relative;padding-left:22px;color:var(--ivory);font-size:16px;line-height:1.4}
-    .svc-copy li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+    .svc-copy li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--live-green)}
     @media(max-width:860px){
       .svc-shell{grid-template-columns:1fr;gap:8px}
       .svc-tab{padding:20px 8px}
-      .svc-panel{grid-template-columns:1fr;text-align:center;padding-top:28px}
-      .svc-visual{width:150px;height:188px;margin:0 auto}
+      .svc-panel{text-align:center;padding-top:28px}
       .svc-copy p{max-width:none}
       .svc-copy ul{align-items:flex-start;margin-left:auto;margin-right:auto;width:fit-content}
     }
@@ -505,11 +500,6 @@
 
         <div class="svc-stage">
           <div class="svc-panel active" id="svc-panel-1" role="tabpanel" aria-labelledby="svc-tab-1">
-            <svg class="svc-visual" viewBox="0 0 104 130" aria-hidden="true">
-              <path class="eggbg" d="M52 3C79 3 100 33 100 68c0 34-22 59-48 59S4 102 4 68C4 33 25 3 52 3Z"/>
-              <circle class="ic" cx="46" cy="60" r="17"/><circle class="ic" cx="46" cy="60" r="9"/>
-              <path class="ic" d="M62 44 78 28M78 28h-11M78 28v11"/>
-            </svg>
             <div class="svc-copy">
               <p>Precision acquisition built on unit economics — paid search, paid social, and landing systems that pay for themselves before they scale.</p>
               <ul>
@@ -522,11 +512,6 @@
           </div>
 
           <div class="svc-panel" id="svc-panel-2" role="tabpanel" aria-labelledby="svc-tab-2" hidden>
-            <svg class="svc-visual" viewBox="0 0 104 130" aria-hidden="true">
-              <path class="eggbg" d="M52 3C79 3 100 33 100 68c0 34-22 59-48 59S4 102 4 68C4 33 25 3 52 3Z"/>
-              <circle class="icf" cx="38" cy="46" r="7"/><circle class="icf" cx="70" cy="52" r="7"/><circle class="icf" cx="46" cy="82" r="7"/>
-              <path class="ic" d="M38 46 70 52M38 46 46 82M70 52 46 82"/>
-            </svg>
             <div class="svc-copy">
               <p>Organic resonance engineered as a demand asset — not a content treadmill. Built for lifecycle pull, not vanity reach.</p>
               <ul>
@@ -539,11 +524,6 @@
           </div>
 
           <div class="svc-panel" id="svc-panel-3" role="tabpanel" aria-labelledby="svc-tab-3" hidden>
-            <svg class="svc-visual" viewBox="0 0 104 130" aria-hidden="true">
-              <path class="eggbg" d="M52 3C79 3 100 33 100 68c0 34-22 59-48 59S4 102 4 68C4 33 25 3 52 3Z"/>
-              <path class="ic" d="M46 40v14M46 54 30 66M46 54 62 66M30 66v12M62 66v12"/>
-              <circle class="icf" cx="46" cy="36" r="6"/><circle class="icf" cx="30" cy="82" r="6"/><circle class="icf" cx="62" cy="82" r="6"/>
-            </svg>
             <div class="svc-copy">
               <p>AI leverage deployed on top of clean process — automating the expensive, repeatable work without breaking core RevOps.</p>
               <ul>
@@ -556,10 +536,6 @@
           </div>
 
           <div class="svc-panel" id="svc-panel-4" role="tabpanel" aria-labelledby="svc-tab-4" hidden>
-            <svg class="svc-visual" viewBox="0 0 104 130" aria-hidden="true">
-              <path class="eggbg" d="M52 3C79 3 100 33 100 68c0 34-22 59-48 59S4 102 4 68C4 33 25 3 52 3Z"/>
-              <path class="ic" d="M28 42h36l-13 18v16l-10 6V60Z"/>
-            </svg>
             <div class="svc-copy">
               <p>The unsexy layer where most revenue actually leaks: handoffs, SOPs, CRM hygiene, and forecast integrity.</p>
               <ul>
