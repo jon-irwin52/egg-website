@@ -125,15 +125,15 @@
     @media(max-width:760px){.fab-call{display:none}}
     @media(prefers-reduced-motion:reduce){.fab-call{transition:none}}
 
-    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:900;font-size:15px;letter-spacing:.03em;padding:17px 32px;border-radius:999px;position:relative;transition:transform .18s var(--ease);border:none;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:900;font-size:15px;letter-spacing:.03em;padding:17px 32px;border-radius:999px;position:relative;transition:transform .18s var(--ease),box-shadow .3s ease-out,border-color .3s ease-out;border:1.5px solid transparent;cursor:pointer}
     .btn::after{content:"";position:absolute;inset:0;border-radius:999px;box-shadow:0 16px 40px -10px rgba(170,137,58,.7);opacity:0;transition:opacity .18s ease-out;pointer-events:none}
-    .btn:hover{transform:translateY(-2px)}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(255,221,99,.95);box-shadow:0 0 0 1.5px rgba(255,221,99,.8),0 0 16px 4px rgba(255,221,99,.85),0 0 40px 10px rgba(201,168,76,.7)}
     .btn:hover::after{opacity:1}
     .btn:active{transform:scale(.97)}
     .btn .ar{transition:transform .18s var(--ease)}
     .btn:hover .ar{transform:translateX(5px)}
     .btn.line{background:transparent;color:var(--ivory);border:1.5px solid rgba(245,243,235,.35)}
-    .btn.line:hover{border-color:var(--ivory)}
+    .btn.line:hover{border-color:rgba(255,221,99,.95)}
     .btn.line::after{display:none}
     .btn.teal{background:var(--teal);color:#fff}
     .btn.sm{padding:11px 22px;font-size:13px}
