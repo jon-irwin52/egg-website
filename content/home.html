@@ -73,6 +73,7 @@
       --ease:cubic-bezier(.16,1,.3,1);
       --grad-gold:linear-gradient(115deg,#FFDD63 0%,#C9A84C 40%,#836B2C 100%);
       --grad-gold-deep:linear-gradient(115deg,#C9A84C 0%,#AA893A 45%,#7A5F26 100%);
+      --brushed-gold:linear-gradient(100deg,#8F7330 0%,#C9A84C 16%,#F3D585 30%,#E0BC6E 40%,#AA893A 52%,#D3AD52 66%,#F0CB6C 78%,#9C7F35 90%,#8F7330 100%);
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -126,7 +127,7 @@
     @media(max-width:760px){.fab-call{display:none}}
     @media(prefers-reduced-motion:reduce){.fab-call{transition:none}}
 
-    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:900;font-size:15px;letter-spacing:.03em;padding:17px 32px;border-radius:999px;position:relative;transition:transform .18s var(--ease),box-shadow .3s ease-out,border-color .3s ease-out;border:1.5px solid transparent;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--brushed-gold);color:var(--ink);text-decoration:none;font-weight:900;font-size:15px;letter-spacing:.03em;padding:17px 32px;border-radius:999px;position:relative;transition:transform .18s var(--ease),box-shadow .3s ease-out,border-color .3s ease-out;border:1.5px solid transparent;cursor:pointer}
     .btn::after{content:"";position:absolute;inset:0;border-radius:999px;box-shadow:0 16px 40px -10px rgba(170,137,58,.7);opacity:0;transition:opacity .18s ease-out;pointer-events:none}
     .btn:hover{transform:translateY(-2px);border-color:rgba(255,221,99,.95);box-shadow:0 0 0 1.5px rgba(255,221,99,.8),0 0 16px 4px rgba(255,221,99,.85),0 0 40px 10px rgba(201,168,76,.7)}
     .btn:hover::after{opacity:1}
@@ -135,7 +136,6 @@
     .btn:hover .ar{transform:translateX(5px)}
     .btn.line{background:transparent;color:var(--ivory);border:1.5px solid rgba(245,243,235,.35)}
     .btn.line:hover{border-color:rgba(255,221,99,.95)}
-    .btn.line::after{display:none}
     .btn.teal{background:var(--teal);color:#fff}
     .btn.sm{padding:11px 22px;font-size:13px}
 
