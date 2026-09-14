@@ -16,6 +16,14 @@ export const postSlugsQuery = groq`
   *[_type == "post" && defined(slug.current)][].slug.current
 `;
 
+export const sitemapPostsQuery = groq`
+  *[_type == "post" && defined(slug.current) && noIndex != true] {
+    "slug": slug.current,
+    publishedAt,
+    "updatedAt": _updatedAt
+  }
+`;
+
 export const postBySlugQuery = groq`
   *[_type == "post" && slug.current == $slug][0]{
     title,
